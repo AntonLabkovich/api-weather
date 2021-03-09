@@ -1,0 +1,22 @@
+.weather{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  & .header{
+    display: flex;
+  }
+}
+
+
+
+@media only screen
+  and (max-device-width: 1080px) 
+{
+  .header{
+    flex-direction: column;
+    align-items: center;
+    & .search-select{
+      margin-bottom: 10px;
+    }
+  }  
+}

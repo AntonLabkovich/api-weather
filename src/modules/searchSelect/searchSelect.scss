@@ -1,0 +1,10 @@
+.search-select{
+  position: relative;
+  z-index: 1;
+  .search-option{
+    position: absolute;
+    height: 300px;
+    overflow-y: scroll;
+    background-color: white;
+  }
+}

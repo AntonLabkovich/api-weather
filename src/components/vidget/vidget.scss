@@ -1,0 +1,20 @@
+.vidget{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 7px;
+  & .vidget-iconinfo:hover + .vidget-info{
+    opacity: 1;
+    transition: opacity .2s linear;
+  }
+  & .vidget-info{
+    position: absolute;
+    margin-top: 2px;
+    background-color: rgba(151, 148, 148, 0.295);
+    top: 15px;
+    left: 50%;
+    transform: translate(-50%);
+    opacity: 0;
+    text-align: center;
+  }
+}

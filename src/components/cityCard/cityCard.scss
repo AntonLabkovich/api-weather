@@ -1,0 +1,110 @@
+.card-city{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid black;
+  margin: 10px;
+  border-radius: 20px;
+  padding-top: 5px;
+  text-shadow: rgb(0, 0, 0) 0 0 2px;
+  color: white;
+  & .city-name{
+    display: flex;
+    
+  }
+  & h3{
+    font-size: 2rem; 
+    text-transform: uppercase;
+    text-align: center;
+    margin-right: 5px;
+  }
+  & .card-city-info{
+    text-align: center;
+    margin-top: 10px;
+    & .wind-direction{
+      font-style: normal;
+      font-weight: 400;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      margin-left: 5px;
+    }
+    & p{
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+    & .date{
+      text-transform: capitalize;
+    }
+    & .buttons{
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-around;
+     
+      & button{
+        display: inline-flex;
+        align-items: center;
+        padding: 15px;
+        color: #383d48;
+        border: 0;
+        background: #ffffff00;
+        &:hover span{
+          max-width: 150px;
+          opacity: 1;
+          margin-right: 6px;
+        }
+
+        &:active{
+          outline: 0;
+          opacity: .6;
+        }
+        &:focus{
+          outline: 0;
+        }
+        & span{
+          display: block;
+          overflow: hidden;
+          max-width: 0;
+          opacity: 0;
+          font-size: 12px;
+          font-weight: 700;
+          text-transform: uppercase;
+          white-space: nowrap;
+          letter-spacing: 1px;
+          line-height: 1;
+          transition: .4s ease;
+
+        }
+      }
+      & .reload{
+        &:after{
+          content: '\e860';
+          font-family: 'Linearicons';
+          font-style: normal;
+          font-weight: 400;
+          font-variant: normal;
+          text-transform: none;
+          line-height: 1;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          font-size: 22px;
+        }
+      }
+      & .remove{
+        &:after{
+          content: '\e880';
+          font-family: 'Linearicons';
+          font-style: normal;
+          font-weight: 400;
+          font-variant: normal;
+          text-transform: none;
+          line-height: 1;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          font-size: 22px;
+        }
+      }
+    }
+  }
+}
