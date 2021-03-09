@@ -15,7 +15,8 @@ const cities = (state = initialState, { type, payload }) => {
     case 'SET_CITIES':
       return {
         ...state,
-        monitoredCity: payload
+        monitoredCity: payload,
+        isLoading: false
       }
     case 'SET_SEARCHED_CITIES':
         return{

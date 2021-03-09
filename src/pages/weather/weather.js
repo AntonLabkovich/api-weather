@@ -14,7 +14,7 @@ const Weather = () => {
   const dispatch = useDispatch()
   const isLoading = useSelector(state => state.cities.isLoading)
   const isError = useSelector(state => state.cities.isError)
-  console.log('isError',isError)
+  console.log('isError',isLoading)
   useEffect(() => {
     if(JSON.parse(localStorage.getItem('monitoredCity'))){
       let monitoredCity = JSON.parse(localStorage.getItem('monitoredCity'))
