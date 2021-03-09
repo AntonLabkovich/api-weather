@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { setCitiesError } from '../../redux/actions/cities'
 

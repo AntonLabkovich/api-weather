@@ -4,6 +4,7 @@ import { searchMaxTemp, searchMinTemp } from '../../utils/serachMinMax'
 
 export const updateMonitoredOneCity = (id, monitoredCities) => {
   const idSearchCity = monitoredCities.findIndex((item)=>item.id === id)
+  console.log(monitoredCities)
   return dispatch => {
     dispatch(setCitiesLoading())
     
@@ -17,6 +18,8 @@ export const updateMonitoredOneCity = (id, monitoredCities) => {
       hour: 'numeric',
       minute: 'numeric',
     }
+
+    console.log('make request')
     axios.get(`https://api.openweathermap.org/data/2.5/weather?units=metric&id=${id}&appid=${apiKey}`)
       .then(res=>{ 
         if(idSearchCity === -1){
@@ -40,6 +43,7 @@ export const updateMonitoredOneCity = (id, monitoredCities) => {
 }
 
 export const updateMonitoredAllCity = (urls) => {
+  console.log('make request')
   return dispatch => {
     dispatch(setCitiesLoading())
     const date = new Date()

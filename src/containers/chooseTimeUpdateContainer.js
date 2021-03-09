@@ -16,7 +16,6 @@ const ChooseTimeUpdateContaier = () => {
 
   const onClickChooseTimeUpdate = (time) => {
     clearTimeout(timer)
-    console.log(time)
     const newTimer = setTimeout(() => {
       const apiKey = localStorage.getItem('api')
       const urls = monitoredCities.map((item=>`https://api.openweathermap.org/data/2.5/weather?units=metric&id=${item.id}&appid=${apiKey}`))

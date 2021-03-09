@@ -15,15 +15,12 @@ const cities = (state = initialState, { type, payload }) => {
     case 'SET_CITIES':
       return {
         ...state,
-        monitoredCity: payload,
-        isLoading: false,
-        isError: false
+        monitoredCity: payload
       }
     case 'SET_SEARCHED_CITIES':
         return{
           ...state,
-          filterItems: payload,
-          isError: false 
+          filterItems: payload
         }
     case 'LOADING':
       return {
@@ -39,8 +36,7 @@ const cities = (state = initialState, { type, payload }) => {
     case 'REMOVE_MONITORED_ONE_CITY':
       return{
         ...state,
-        monitoredCity: [...payload],
-        isError: false
+        monitoredCity: [...payload]
       }
     case 'SET_MIN_MAX_TEMP':
       return{

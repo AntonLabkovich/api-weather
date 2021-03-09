@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { updateMonitoredAllCity, setCities } from '../../redux/actions/cities'
+import { setCities } from '../../redux/actions/cities'
 
 import CityListContainer from '../../containers/cityListContainer'
 import SearchSelectContainer from '../../containers/searchSelectContainer'
@@ -14,9 +14,9 @@ const Weather = () => {
   const dispatch = useDispatch()
   const isLoading = useSelector(state => state.cities.isLoading)
   const isError = useSelector(state => state.cities.isError)
-  console.log('loading',isLoading)
+  console.log('isError',isError)
   useEffect(() => {
-    if(JSON.parse(localStorage.getItem('monitoredCity')).length > 0){
+    if(JSON.parse(localStorage.getItem('monitoredCity'))){
       let monitoredCity = JSON.parse(localStorage.getItem('monitoredCity'))
       dispatch(setCities(monitoredCity))
     }else{
